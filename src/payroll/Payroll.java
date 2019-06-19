@@ -13,7 +13,7 @@ public class Payroll
 {
 
    private double Salary;
-   private double bonus;
+   private double bonus = 1.1;
    private String emp;
  
      /**constructor that takes the salary and employee name
@@ -27,6 +27,12 @@ public class Payroll
         }
          /**The method for calculating salary including bonus.Bonus is 10% of salary 
       */ 
+   public double calcPay(double salary){
+       salary = getSalary();
+       salary *= bonus;
+       
+       return salary;
+   }
         
         
      /**The getter for the Salary
